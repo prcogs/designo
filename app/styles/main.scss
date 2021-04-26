@@ -1,11 +1,26 @@
 
 // Utils
+@import './utils/mixins';
 
 // Base
 @import './base/reset';
+@import './base/variables';
+@import './base/typographies';
 
 // Components
+@import './components/buttons';
 
 // Layout
+@import './layout/footer';
+@import './layout/header';
+
 
 // Pages
+@import './pages/about';
+@import './pages/appDesign';
+@import './pages/blog';
+@import './pages/contact';
+@import './pages/graphicDesign';
+@import './pages/home';
+@import './pages/locations';
+@import './pages/webDesign';

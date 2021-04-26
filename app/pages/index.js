@@ -1,37 +1,23 @@
 import Head from 'next/head'
-import Link from 'next/link';
+import Header from '../components/layout/header'
 
 export default function Home() {
   
+
   return (
-    <div className="">
+    <div className="home">
       <Head>
-        <title>Designo</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Home - Designo</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32" />
+
+        {/* Font Jost Regular 400* & Medium 500 */}
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet"/>  
       </Head>
 
-      <main classNam="main">
-        <h1 className="title">Welcome to our demo blog!</h1>
-
-        <p>
-          You can find more articles on the{' '}
-          <Link href='/blog'>
-            <a>blog articles page</a>
-          </Link>
-        </p>
-
-      </main>
-
-      <footer>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel Logo' className="" />
-        </a>
-      </footer>
+      <Header/>
     </div>
   )
 }
+
+

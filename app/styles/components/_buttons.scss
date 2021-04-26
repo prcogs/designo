@@ -1,0 +1,29 @@
+
+.btn {
+   font-family: $font;
+   font-size: 1rem;
+   font-weight: 500;
+   letter-spacing: 1.1px;
+
+   &--dark {
+      @include button($second-secondary-color,
+                   $third-primary-color,
+                   $third-secondary-color,
+                   $first-secondary-color,
+                   "",
+                   8px,
+                   3.5rem,
+                   25px);
+   }
+   
+   &--light {
+      @include button(  $third-primary-color,
+                     $third-primary-color,
+                     $first-primary-color,
+                     $first-secondary-color,
+                     "",
+                     8px,
+                     3.5rem,
+                     25px);  
+   }              
+}
