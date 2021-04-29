@@ -8,11 +8,16 @@
 @import './base/typographies';
 
 // Components
-@import './components/buttons';
+@import './components/home/featureCompagny';
+@import './components/home/bannerTop';
 
 // Layout
+@import './layout/buttons';
 @import './layout/footer';
 @import './layout/header';
+@import './layout/cardsDesign';
+@import './layout/bannerTopDesign';
+@import './layout/cardsProject';
 
 
 // Pages
