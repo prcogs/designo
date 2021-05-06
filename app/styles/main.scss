@@ -10,6 +10,12 @@
 // Components
 @import './components/home/featureCompagny';
 @import './components/home/bannerTop';
+@import './components/about/descriptionCompagny';
+@import './components/about/location';
+@import './components/locations/location';
+@import './components/contact/formContact';
+@import './components/blog/contentBlog';
+@import './components/blog/comments';
 
 // Layout
 @import './layout/buttons';
@@ -18,6 +24,7 @@
 @import './layout/cardsDesign';
 @import './layout/bannerTopDesign';
 @import './layout/cardsProject';
+@import './layout/paginations';
 
 
 // Pages

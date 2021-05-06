@@ -29,7 +29,7 @@ const Header = ({ position, nameSize }) => {
 
 
          {(nameSize !== "mobile" || (nameSize === "mobile" && showMenu)) && <ul className={"header__list header__list--"+ position}>
-                                                                              <li className={activeLi("")}><Link href="/"><a>Our compagny</a></Link></li>
+                                                                              <li className={activeLi("about")}><Link href="/about"><a>Our compagny</a></Link></li>
                                                                               <li className={activeLi("locations")}><Link href="/locations"><a>Locations</a></Link></li>
                                                                               <li className={activeLi("blog")}><Link href="/blog"><a>Blog</a></Link></li>
                                                                               <li className={activeLi("contact")}><Link href="/contact"><a>Contact</a></Link></li>

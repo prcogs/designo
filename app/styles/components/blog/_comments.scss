@@ -1,0 +1,25 @@
+
+
+.comments {
+   margin: auto;
+   margin-top: 3rem;
+   margin-bottom: 5rem;
+   padding-left: 1rem;
+   padding-right: 1rem;
+
+   @media screen and (min-width:768px) {
+      width: 80vw;
+      max-width: 900px;
+   }
+
+   &__comment {
+      border-bottom: 1px solid rgba($color: $second-secondary-color, $alpha: .5) ;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+
+      p:nth-of-type(1) {
+         margin-bottom: .5rem;
+         font-size: .8rem;
+      }
+   }
+}

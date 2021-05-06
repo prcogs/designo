@@ -1,0 +1,43 @@
+
+.about {
+
+   &__linksLocation {
+      display: flex;
+      flex-direction: column;
+      max-width: 1024px;
+
+      margin: auto;
+      margin-top: 7.5rem;
+      margin-bottom: 7.5rem;
+
+      @media screen and (min-width:1024px) {
+         flex-direction: row;
+         justify-content: space-around;
+      }
+   }
+
+   &__location {
+      text-align: center;
+
+      h3 {
+         text-transform: uppercase;
+         margin-bottom: 2rem;
+      }
+
+      a {
+         @include button(
+            $third-secondary-color,
+            $third-secondary-color,
+            $first-primary-color,
+            $first-secondary-color,
+            "",
+            8px,
+            3.5rem,
+            18.5px
+         );
+
+         padding: 18.5px
+      }
+
+   }
+}

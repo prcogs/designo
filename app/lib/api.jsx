@@ -77,10 +77,12 @@ export async function getPost(slug) {
   const data = await fetchAPI(
     `
     fragment PostFields on Post {
+      id
       title
       excerpt
       slug
       date
+      databaseId
     }
 
     query PostBySlug($id: ID!, $idType: PostIdType!) {
@@ -105,7 +107,7 @@ export async function getPost(slug) {
 export const postComment = async(author, content, idArticle) => {
   const data = await fetchAPI(
     `
-    mutation CREATE_COMMENT($id : Int, $author: String, $content: String) {
+    mutation CREATE_COMMENT($id :Int, $author: String, $content: String) {
       createComment(input: {
         commentOn: $id, 
         content: $content, 
@@ -141,7 +143,7 @@ export const getComments = async(id) => {
   const data = await fetchAPI(
     `
     query getComments($id:ID!){
-      post(id: $id, idType: DATABASE_ID) {
+      post(id: $id, idType: ID) {
         id
         title
         comments(first: 100) {

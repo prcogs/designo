@@ -1,0 +1,83 @@
+
+
+.descriptionCompagny {
+   max-width: 1110px;
+
+   // background-image: url();
+   background-color: $card-project-color;
+   text-align: center;
+   padding-bottom: 5rem;
+
+   @media screen and (min-width:768px){
+      width: 90vw;
+
+      margin: auto;
+      margin-top: 7.5rem;
+      padding-bottom: 4.25rem;
+
+      border-radius: 15px;
+   }
+
+   @media screen and (min-width:1024px){
+      display: flex;
+      text-align: left;
+      padding-bottom: 0;
+      
+   }
+
+   
+
+   &Container {
+      margin: 5rem 1.5rem 5rem 1.5rem;
+
+      @media screen and (min-width:1024px){
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         width: 55rem;
+
+         margin-left: 0;
+         margin-right: 0;
+         padding-left: 6rem;
+         padding-right: 6rem;
+      }
+
+      h2 {
+         color: $first-primary-color;
+         margin-bottom: 1.5rem;
+      }
+
+      p:nth-of-type(1) {
+         margin-bottom: 1rem;
+      }
+   }
+
+   
+
+   img {
+      width: 100%;
+
+      @media screen and (min-width:768px){   
+         border-radius: 15px 15px 0 0;
+      }
+
+      @media screen and (min-width:1024px){
+         border-radius: 15px 0 0 15px;
+      }
+   }
+
+
+   &--deal {
+      @media screen and (min-width:1024px){
+         flex-direction: row-reverse;
+         
+      }
+
+      @media screen and (min-width:1024px){
+         img{
+            border-radius: 0 15px 15px 0;
+
+         }
+      }
+   }
+}

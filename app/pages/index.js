@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <Head>
           <title>Home - Designo</title>
-          <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"/>
 
           {/* Font Jost Regular 400* & Medium 500 */}
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -32,7 +32,6 @@ export default function Home() {
         <CardsDesign/>
 
         <FeatureCompagny/>
-
       </div>
 
       <Footer/>
