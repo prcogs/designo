@@ -1,0 +1,107 @@
+
+
+footer {
+   margin-top: calc(-11.9rem + 4.4rem); // à revoir
+
+   .footer {
+      
+      &__about {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         position: relative;
+         max-width: 950px;
+         top: 11.9rem;
+
+         color: $third-secondary-color;
+         background-color: $first-primary-color;
+         background-image: url("/assets/shared/desktop/bg-pattern-call-to-action.svg");
+         border-radius: 15px;
+         // margin: auto;
+         margin-left: 1.5rem;
+         margin-right: 1.5rem;
+         padding: 4rem 1.5rem 4rem 1.5rem;
+
+         @media screen and (min-width:1024px) {
+            flex-direction: row;
+            justify-content: space-between;
+
+            margin-left: auto;
+            margin-right: auto;
+            padding: 4rem 6rem 4rem 6rem;
+         }
+         
+         img {
+            position: absolute;
+         }
+
+         &Container {
+            text-align: center;
+
+            @media screen and (min-width:1024px) {
+               max-width: 40%;
+               text-align: left;
+            }
+
+            p {
+               margin-bottom: 32px;
+               margin-top: 6px;
+
+               @media screen and (min-width:1024px) {
+                  margin-top: 1rem;
+               }
+            }
+         }
+
+         button {
+            width:max-content;
+            align-self: center;
+         }
+      }
+
+      &__infoOfCompagny {
+         background-color: $second-secondary-color;
+         padding-left: 1rem;
+         padding-right: 1rem;
+
+         &Container {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            justify-content: center;
+            text-align: center;
+            gap: 2.5rem;
+            max-width: 1024px;
+
+            color: $third-secondary-color;
+            margin: auto;
+            padding-bottom: 4rem;
+            padding-top: 15.9rem;
+
+            @media screen and (min-width: 768px) {
+               grid-template-columns: 1fr 1fr 2fr;
+               grid-template-rows: 1fr 1fr;
+
+               justify-content: space-between;
+
+               text-align: left;
+            }
+         }
+
+         &--socialNetworks {
+
+            img {
+               margin-left: 8px;
+               margin-right: 8px;
+            }
+
+            @media screen and (min-width: 768px) {
+               align-self: flex-end;
+               justify-self: center;
+            }
+         }
+         
+      }
+   }
+   
+}

@@ -1,0 +1,157 @@
+
+
+.formContact {
+   display: flex;
+   flex-direction: column;
+
+
+   @media screen and (min-width:768px){
+      padding-left: 3.625rem  !important;
+      padding-right: 3.625rem !important;
+   }
+
+   @media screen and (min-width:1024px){
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+   }
+
+   
+
+   &__description {
+      margin-bottom: 3rem;
+
+      h2 {
+         margin-bottom: 2rem;
+      }
+
+      @media screen and (min-width:768px){
+         text-align: left;
+
+         p {
+            max-width: none !important;
+         }
+      }
+
+      @media screen and (min-width:1024px){
+         width: 45%;
+
+         margin: 0;
+
+         p {
+            max-width: none !important;
+            margin: 0 !important;
+         }
+      }
+   }
+
+   &__form {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      max-width: 800px;
+
+      @media screen and (min-width:1024px){
+         width: 35%;
+      }
+
+      &--commentaire {
+         background-color: $first-primary-color;
+         padding-top: 3rem;
+         padding-bottom: 3rem;
+
+         @media screen and (min-width:768px){
+            width: 50vw;
+            margin: auto;
+
+            border-radius: 15px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+         }
+      }
+
+      input {
+         height: 3rem;
+      }
+
+      input,
+      textarea {
+         width: 100%;
+
+         background-color: transparent;
+         border: none;
+         border-bottom: 2px solid  $third-secondary-color;
+         margin-bottom: 1rem;
+         outline: none;
+         padding: 12px;
+
+         &::placeholder {
+            color:$third-secondary-color;
+         }
+
+         &:hover {
+            border-bottom:3px solid $third-secondary-color;
+            padding-bottom: 11px;
+
+            &::placeholder {
+               opacity: 1;
+            }
+         }
+
+         &:focus {
+            border-bottom:3px solid $third-secondary-color;
+         }
+      }
+
+      textarea {
+         min-height: 7rem;
+      }
+
+      
+
+      button {
+         display: flex;
+         align-self: center;
+         width: fit-content;
+
+         margin-top: 1.5rem;
+         font-family: $font;
+
+         @media screen and (min-width:768px){
+            align-self: flex-end;
+         }
+      }
+
+      label {
+         position: relative;
+      }
+   
+   }
+
+   
+   &__errors {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+
+      display: flex;
+      align-items: center;
+      color: $third-secondary-color;
+      font-style: oblique;
+
+      img {
+         width: 20px;
+         height: 20px;
+
+         background-color: $third-secondary-color;
+         border-radius: 50%;
+         color: rgba($color: #000000, $alpha: 0);
+         margin-left: 10px;
+         padding: 5px;
+      }
+   }
+
+   &__remarque {
+      display: none;
+   }
+}

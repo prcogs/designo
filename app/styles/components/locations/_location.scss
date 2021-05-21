@@ -1,0 +1,116 @@
+
+
+.locations {
+   
+   &__allLocations {
+      max-width: 1110px;
+
+      margin: auto;
+
+      @media screen and (min-width:768px){
+         width: 90vw;
+      }
+   }
+
+   &__location {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.5rem;
+
+      @media screen and (min-width:768px){
+         margin-bottom: 6.5rem;
+      }
+
+      @media screen and (min-width:768px){
+         justify-content: center;
+      }
+
+      @media screen and (min-width:1024px){
+         margin-bottom: 2rem;
+      }
+
+      &:nth-of-type(2n) {
+         @media screen and (min-width:1024px){
+            flex-direction: row;
+
+            .mapid {
+               margin-right: 2rem;
+            }
+         }
+      }
+
+      &:nth-of-type(2n+1) {
+         @media screen and (min-width:1024px){
+            flex-direction: row-reverse;
+
+            .mapid {
+               margin-left: 2rem;
+            }
+         }
+      }
+
+      .mapid {
+         height: 20rem;
+
+         @media screen and (min-width:768px){
+            border-radius: 15px;
+            margin-bottom: 3rem;
+         }
+
+         @media screen and (min-width:1024px){
+            width: 30rem;
+            height: auto;
+            margin-bottom: 0;
+         }
+      }
+
+      
+
+      &Container {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         text-align: center;
+
+         background-color: $card-project-color;
+         padding-top: 5rem;
+         padding-bottom: 5rem;
+
+         @media screen and (min-width:768px){
+            border-radius: 15px;
+         }
+
+         @media screen and (min-width:1024px){
+            width: 77%;
+            padding: 5.5rem 95px 5.5rem 95px;
+            text-align: left;
+           
+         }   
+
+         h2 {
+            color: $first-primary-color;
+            margin-bottom: 24px;
+         }
+         
+   
+         p:nth-of-type(1) {
+            font-weight: bold;
+         }
+      }
+
+      &Wrapper {
+         @media screen and (min-width:1024px){
+            display: flex;
+         }
+      }
+
+      &__adress {
+         margin-bottom: 1.5rem;
+
+         @media screen and (min-width:1024px){
+            margin-bottom: 0;
+            margin-right: 5rem;
+         }
+      }
+   }
+}

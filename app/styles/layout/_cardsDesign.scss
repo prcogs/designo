@@ -1,0 +1,157 @@
+
+
+.cardsDesign {
+   display: grid;
+   grid-template: 12.5rem 12.5rem 12.5rem / auto;
+   gap: 1.5rem;
+   max-width: 1110px;
+
+   margin: auto;
+   padding-left: 1rem;
+   padding-right: 1rem;
+   margin-top: 7.5rem;
+
+   @media screen and (min-width:768px){
+      grid-template: 20rem 20rem / auto auto;
+   }
+
+   &__card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      background-size: cover;
+      border-radius: 15px;
+      color: $third-secondary-color;
+   }
+  
+   &--web-design {
+      background-image:  url("/assets/home/mobile/image-web-design.jpg");
+
+      @media screen and (min-width:768px){
+         grid-row: 1 / 3;
+         grid-column: 1 / 2;
+
+         background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: 0) ,  rgba($color: $first-primary-color, $alpha: 0)),
+                           url("/assets/home/desktop/image-web-design-large.jpg");
+
+         &:hover {
+            background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: .5) ,  rgba($color: $first-primary-color, $alpha: .5)), 
+                              url("/assets/home/desktop/image-web-design-large.jpg");
+         }
+      }
+
+      @media screen and (min-width:1024px){
+         background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: 0) ,  rgba($color: $first-primary-color, $alpha: 0)),
+                           url("/assets/home/desktop/image-web-design-large.jpg");
+
+         &:hover {
+            background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: .5) ,  rgba($color: $first-primary-color, $alpha: .5)), 
+                              url("/assets/home/desktop/image-web-design-large.jpg");
+         }
+      }
+
+      // postion quand il n'y a que deux cards sur la page
+      &--onpage {
+         @media screen and (min-width:768px){
+            grid-row: initial;
+            grid-column: initial;
+         }
+      }
+
+   }
+
+   &--app-design {
+      background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: 0) ,  rgba($color: $first-primary-color, $alpha: 0)),
+                        url("/assets/home/mobile/image-app-design.jpg");
+
+      @media screen and (min-width:768px){
+         grid-row: 1 / 2;
+         grid-column: 2 / 3;
+
+         background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: 0) ,  rgba($color: $first-primary-color, $alpha: 0)), 
+                              url("/assets/home/tablet/image-app-design.jpg");
+
+         &:hover {
+            background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: .5) ,  rgba($color: $first-primary-color, $alpha: .5)), 
+                              url("/assets/home/tablet/image-app-design.jpg");
+         }
+      }
+
+      @media screen and (min-width:1024px){
+         grid-row: 1 / 2;
+         grid-column: 2 / 3;
+
+         background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: 0) ,  rgba($color: $first-primary-color, $alpha: 0)), 
+                              url("/assets/home/desktop/image-app-design.jpg");
+
+         &:hover {
+            background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: .5) ,  rgba($color: $first-primary-color, $alpha: .5)), 
+                              url("/assets/home/desktop/image-app-design.jpg");
+         }
+      }
+      
+      // postion quand il n'y a que deux cards sur la page
+      &--onpage {
+         @media screen and (min-width:768px){
+            grid-row: initial;
+            grid-column: initial;
+         }
+      }
+   }
+
+   &--graphic-design {
+      background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: 0) ,  rgba($color: $first-primary-color, $alpha: 0)),
+                        url("/assets/home/mobile/image-graphic-design.jpg");
+
+      @media screen and (min-width:768px){
+         grid-row: 2 / 3;
+         grid-column: 2/  3;
+
+         background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: 0) ,  rgba($color: $first-primary-color, $alpha: 0)), 
+                              url("/assets/home/tablet/image-graphic-design.jpg");
+
+         &:hover {
+            background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: .5) ,  rgba($color: $first-primary-color, $alpha: .5)), 
+                              url("/assets/home/tablet/image-graphic-design.jpg");
+         }
+      }
+
+      @media screen and (min-width:1024px){
+         grid-row: 2 / 3;
+         grid-column: 2/  3;
+
+         background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: 0) ,  rgba($color: $first-primary-color, $alpha: 0)), 
+                              url("/assets/home/desktop/image-graphic-design.jpg");
+
+         &:hover {
+            background-image: linear-gradient( rgba($color: $first-primary-color, $alpha: .5) ,  rgba($color: $first-primary-color, $alpha: .5)), 
+                              url("/assets/home/desktop/image-graphic-design.jpg");
+         }
+      }
+
+      // postion quand il n'y a que deux cards sur la page
+      &--onpage {
+         @media screen and (min-width:768px){
+            grid-row: initial;
+            grid-column: initial;
+         }
+      }
+   }
+
+   p {
+      img{
+         margin-left: 1rem;
+      }
+   }
+
+   &--onpage {
+      grid-template: 12.5rem 12.5rem / auto;
+
+      @media screen and (min-width:1024px){
+         grid-template: 19.25rem / 1fr 1fr;
+      }
+   }
+}

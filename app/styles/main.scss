@@ -1,0 +1,40 @@
+
+// Utils
+@import './utils/mixins';
+
+// Base
+@import './base/reset';
+@import './base/variables';
+@import './base/typographies';
+
+// Components
+@import './components/home/featureCompagny';
+@import './components/home/bannerTop';
+@import './components/about/descriptionCompagny';
+@import './components/about/location';
+@import './components/locations/location';
+@import './components/contact/formContact';
+@import './components/blog/contentBlog';
+@import './components/blog/comments';
+
+// Layout
+@import './layout/buttons';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/cardsDesign';
+@import './layout/bannerTopDesign';
+@import './layout/cardsProject';
+@import './layout/paginations';
+@import './layout/modalForm';
+@import './layout/backgroundPage';
+
+
+// Pages
+@import './pages/about';
+@import './pages/appDesign';
+@import './pages/blog';
+@import './pages/contact';
+@import './pages/graphicDesign';
+@import './pages/home';
+@import './pages/locations';
+@import './pages/webDesign';

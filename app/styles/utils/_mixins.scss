@@ -1,0 +1,127 @@
+
+
+@mixin button( $text-color,
+               $text-color-hover, 
+               $color-back, 
+               $color-hover, 
+               $color-active,
+               $radius,
+               $line-heigth,
+               $padding-width,
+               $padding-heigth) {
+             
+
+   position: relative;
+   z-index: 1;
+   // min-width: 8rem;
+
+   background-color: $color-back;
+   border-radius: $radius;
+   color: $text-color;
+   line-height: $line-heigth;
+   padding-left: $padding-width;
+   padding-right: $padding-width;
+   padding-bottom: $padding-heigth;
+   padding-top: $padding-heigth;
+
+   &:hover {
+      color: $text-color-hover;
+      transition: color 175ms;
+
+      &::after {
+         opacity: 1;
+      }
+   }
+
+   // &:active {
+   //    &::before {
+   //       opacity: 1;
+   //    }
+
+   //    &::after {
+   //       opacity: 0;
+   //    }
+   // }
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;  
+      left: 0;
+      z-index: -1;
+
+      background-color: $color-hover;
+      border-radius: $radius;
+
+      opacity: 0;
+      transition: opacity 175ms;
+   }
+
+   // &::before {
+   //    content: "";
+   //    position: absolute;
+   //    top: 0;
+   //    right: 0;
+   //    bottom: 0;  
+   //    left: 0;
+   //    z-index: -2;
+
+   //    background-color: $color-active;
+   //    border-radius: $radius;
+
+   //    opacity: 0;
+   //    transition: opacity 250ms;
+   // }
+
+   &:disabled {
+      cursor: not-allowed;
+
+      &:active,
+      &:hover {
+         &::before {
+            opacity: 0;
+         }
+   
+         &::after {
+            opacity: 0;
+         }
+      }
+   }
+}
+
+@mixin hover-card {
+   position: relative;
+   z-index: 1;
+
+   &:hover {
+      color: $third-secondary-color;
+      transition: color 100ms;
+
+      h3 {
+         color: $third-secondary-color;
+         transition: color 100ms;
+      }
+
+      &::after {
+         opacity: 1;
+      }
+   }
+
+   &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;  
+      left: 0;
+      z-index: -1;
+
+      background-color: $first-primary-color;
+      border-radius: 15px;
+
+      opacity: 0;
+      transition: opacity 100ms;
+   }
+}
