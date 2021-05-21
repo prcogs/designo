@@ -1,3 +1,4 @@
+import Link from "next/link"
 import Header from "./header"
 
 
@@ -10,8 +11,9 @@ const Footer = () => {
                <h2>Let’s talk about your project</h2>
                <p>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</p>
              </div>
-             <button className="btn btn--dark">Get In touch</button>
-             {/* <img src={`assets/shared/desktop/bg-pattern-call-to-action.svg`}/> */}
+            <Link href="/contact"> 
+               <a className="btn btn--dark">Get In touch</a>
+            </Link>
           </div>
 
           
@@ -34,11 +36,11 @@ const Footer = () => {
              </div>
 
              <div className="footer__infoOfCompagny--socialNetworks">
-               <i><img src="/assets/shared/desktop/icon-facebook.svg"/></i>
-               <i><img src="/assets/shared/desktop/icon-youtube.svg"/></i>
-               <i><img src="/assets/shared/desktop/icon-twitter.svg"/></i>
-               <i><img src="/assets/shared/desktop/icon-pinterest.svg"/></i>
-               <i><img src="/assets/shared/desktop/icon-instagram.svg"/></i>
+               <i><img src="/assets/shared/desktop/icon-facebook.svg" alt="Logo Facebook"/></i>
+               <i><img src="/assets/shared/desktop/icon-youtube.svg" alt="Logo Youtube"/></i>
+               <i><img src="/assets/shared/desktop/icon-twitter.svg" alt="Logo Twitter"/></i>
+               <i><img src="/assets/shared/desktop/icon-pinterest.svg" alt="Logo Pinterest"/></i>
+               <i><img src="/assets/shared/desktop/icon-instagram.svg" alt="Logo Instagram"/></i>
              </div>
              </div>
           </div>

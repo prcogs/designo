@@ -13,7 +13,7 @@ const App_design = () => {
    const nameSize = getNameSizeOfScreen()
 
    return(
-      <>
+      <div className="backgroundPage backgroundPage--pageDesign">
          <Head>
             <title>App design - Designo</title>
             {/* <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32" /> */}
@@ -38,7 +38,7 @@ const App_design = () => {
          </div>
 
          <Footer/>
-      </>
+      </div>
    )
 }
 

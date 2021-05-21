@@ -8,7 +8,7 @@ const CardsProject = ({ projects, posts }) => {
             {posts.edges.map((post, key) => {
                return (
                   <Link href={`/blog/${post?.node.slug}`} key={key}>
-                     <a><CardProject project={post.node}/></a>
+                     <a><CardProject project={post.node} blog="blog"/></a>
                   </Link>
                )
             })}
@@ -30,11 +30,13 @@ const CardsProject = ({ projects, posts }) => {
 }
 
 // récupère l'image
-export const CardProject = ({ project }) => {
-
+export const CardProject = ({ project, blog }) => {
+   
+   if(!blog) var className = " cardProject--project"
+   else var className = ""
    return(
-      <div className="cardProject">
-         <img src={`${project?.image}.jpg`}/>
+      <div className={"cardProject" + className}>
+         <img src={project?.extraPostInfo?.image?.sourceUrl !== undefined ? project?.extraPostInfo.image.sourceUrl : project.image + ".jpg"} alt="Image of project / article"/>
          <div className="cardProject__text">
             <h3>{project?.title}</h3>
             <p>{project?.description || project.extraPostInfo.auteurExtrait}</p>

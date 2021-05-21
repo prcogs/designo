@@ -8,6 +8,7 @@ import PaginationRounded from "../layout/paginations";
 const Comments = ({  comments, reqComments, isLoading }) => {
    const [currentPage, setcurrentPage] = useState(1)
    const [postsPerPage, setPostPerPages] = useState(5)
+   const [className, setClassName] = useState("")
 
    const handleChange = (event, value) => {
       setcurrentPage(value);
@@ -16,6 +17,19 @@ const Comments = ({  comments, reqComments, isLoading }) => {
    useEffect(() => {
       reqComments()
    },[])
+
+   useEffect(() => {
+      if(currentPage === 1) {
+         setClassName(" fade-down")
+
+         const timer = setTimeout(() => {
+            setClassName("")
+         }, 1000)
+   
+         return () => clearTimeout(timer)
+      } 
+
+   },[reqComments])
 
    if(isLoading) {
       return (
@@ -34,13 +48,26 @@ const Comments = ({  comments, reqComments, isLoading }) => {
       return(
          <div className="comments">
             <p>{comments.commentCount !== null ? comments.commentCount : 0} commentaire{comments.commentCount > 1 && "s"}</p>
+
             <PaginationRounded handleChange={handleChange} numberMaxPages={numberMaxPages}/>
+
             {comments.commentCount !== null ? 
-               currentPosts.map((comment, i) => {
+               currentPosts.map((comment, key) => {
+                  
+                  if(key === 0) {
+                     if(className !== "") {
+                        var animClass = className + "_firstElement"
+                     } else {
+                        var animClass = className
+                     }
+                  } else {
+                     var animClass = className
+                  }
+
                   return (
-                     <div className="comments__comment" key={i}>
-                        <h3>{comment?.author.node.name}</h3>
-                        <p>le {formatDate(comment.date)[0]}{} à {formatDate(comment.date)[1]}</p>
+                     <div className={"comments__comment" + animClass} key={key}>
+                        <p>{comment?.author.node.name}</p>
+                        <p>le {formatDate(comment.date)[0]} à {formatDate(comment.date)[1]}</p>
                         {ReactHtmlParser(comment.content)}
                      </div>
                   )
@@ -48,8 +75,6 @@ const Comments = ({  comments, reqComments, isLoading }) => {
 
                <p>No commentaire</p>
             }
-               
-
          </div>
       )
    }

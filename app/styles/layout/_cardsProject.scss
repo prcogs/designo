@@ -4,7 +4,18 @@
    flex-direction: column;
    max-width: 400px;
 
-   margin-bottom: 2.5rem;
+   &--project {
+      background-color: $card-project-color;
+      border-radius: 15px;
+      margin-bottom: 2.5rem;
+
+      @include hover-card;
+
+      @media screen and (min-width:768px){
+         margin: 2rem;
+      }
+   } 
+
 
    @media screen  and (min-width:768px){
       flex-direction: row;
@@ -13,11 +24,7 @@
 
    @media screen  and (min-width:1024px){
       flex-direction: column;
-      max-width: none;
-      width: 25vw;
       max-width: 350px;
-
-      margin: 2rem;
    }
 
    img {
@@ -40,7 +47,6 @@
       flex-direction: column;
       justify-content: center;
 
-      background-color: $card-project-color;
       border-radius: 0 0 15px 15px;;
       padding: 32px 30px 32px 30px;
       text-align: center;
@@ -76,9 +82,14 @@
 .cardsProject {
    display: flex;
    flex-direction: column;
+   justify-content: center;
    align-items: center;
    margin-left: 2rem;
    margin-right: 2rem;
+
+   @media screen  and (min-width:768px){
+      align-items: stretch;
+   }
 
    @media screen  and (min-width:1024px){
       flex-direction: row;
@@ -86,5 +97,17 @@
       justify-content: center;
       max-width: 1440px;
       margin: auto;
+   }
+
+   a {
+      background-color: $card-project-color;
+      border-radius: 15px;
+      margin-bottom: 2.5rem;
+
+      @include hover-card;
+
+      @media screen and (min-width:768px){
+         margin: 2rem;
+      }
    }
 }

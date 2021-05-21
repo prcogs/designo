@@ -12,7 +12,7 @@ export const CardDesign = ({ children, name, page }) => {
       <Link href={`/${name}`}>
          <a className={className}>
             {children}
-            <p>VIEW PROJECTS <img src="/assets/shared/desktop/icon-right-arrow.svg"/></p>
+            <p>VIEW PROJECTS <img src="/assets/shared/desktop/icon-right-arrow.svg" alt="Icon rigth arrow"/></p>
          </a>
       </Link>
    )

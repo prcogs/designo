@@ -39,7 +39,7 @@ const Article = ({ post }) => {
             <BannerTopDesign>
                <h1>{post?.title}</h1>
                <p>{post?.description}</p>
-               <p>Posté le {formatDate(post?.date, "T")[0]}</p>
+               <p>Posted on {formatDate(post?.date, "T")[0]}</p>
             </BannerTopDesign>
 
             <div className="contentBlog">

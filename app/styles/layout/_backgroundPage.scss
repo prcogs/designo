@@ -1,0 +1,28 @@
+
+
+.backgroundPage {
+
+   @media screen and (min-width:1024px){
+      background-image: url("/assets/shared/desktop/bg-pattern-leaf.svg");
+      background-repeat: no-repeat;
+      background-position: 0% 25%;
+
+      &--pageDesign {
+         background-position: 0% 15%;
+      }
+
+      &--pageAbout {
+         background-image: url("/assets/shared/desktop/bg-pattern-leaf.svg"),
+                           url("/assets/shared/desktop/bg-pattern-leaf.svg");
+         background-repeat: no-repeat,
+                           no-repeat;
+         background-position: 0% 15%,
+                              150% 62%;
+      }
+
+      &--pageContact {
+         background-position: 115% 70%;
+      }
+      
+   }
+}

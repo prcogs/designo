@@ -12,10 +12,11 @@ const About = () => {
    const nameSize = getNameSizeOfScreen()
 
    return(
-      <>
+      <div className="backgroundPage backgroundPage--pageAbout">
          <Head>
             <title>About - Designo</title>
             {/* <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32" /> */}
+              
 
             {/* Font Jost Regular 400* & Medium 500 */}
             <link rel="preconnect" href="https://fonts.gstatic.com"/>
@@ -27,7 +28,7 @@ const About = () => {
          <div className="about">
             
             <BannerTopDesign detailClassName="bannerTopDesign--about">
-               <img src="/assets/about/desktop/image-about-hero.jpg"/>
+               <img src={`/assets/about/${nameSize}/image-about-hero.jpg`} alt="Image about hero"/>
                <div className="bannerTopDesign--aboutContainer">
                   <h1>About Us</h1>
                   <p>Founded in 2010, we are a creative agency that produces lasting results for our clients. 
@@ -37,7 +38,7 @@ const About = () => {
             </BannerTopDesign>
 
             <DescriptionCompagny>
-               <img src="/assets/about/desktop/image-world-class-talent.jpg"/>
+               <img src={`/assets/about/${nameSize}/image-world-class-talent.jpg`} alt="Image word class talent"/>
                <div className="descriptionCompagnyContainer">
                   <h2>World-class talent</h2>
                   <p>We are a crew of strategists, problem-solvers, and technologists. Every design is thoughtfully crafted from concept to launch, ensuring success in its given market. 
@@ -54,7 +55,7 @@ const About = () => {
             </div>
 
             <DescriptionCompagny detailClassName="deal">
-               <img src="/assets/about/desktop/image-real-deal.jpg"/>
+               <img src={`/assets/about/${nameSize}/image-real-deal.jpg`} alt="Image real deal"/>
                <div className="descriptionCompagnyContainer">
                   <h2>The real deal</h2>
                   <p>As strategic partners in our clients’ businesses, we are ready to take on any challenge as our own. Solving real problems require empathy and collaboration, and we strive to bring a fresh perspective to every opportunity. 
@@ -65,7 +66,7 @@ const About = () => {
 
          </div>
          <Footer/>
-      </>
+      </div>
    )
 }
 

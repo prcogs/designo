@@ -16,7 +16,7 @@ export const useWindowSize = () => {
 const getNameSizeOfScreen = () => {
    const [width, height] = useWindowSize();
 
-   if(width >= 1440)   return "desktop"
+   if(width >= 1024)   return "desktop"
    else if(width >= 768) return "tablet"
    else return "mobile"
 }

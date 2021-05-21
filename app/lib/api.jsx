@@ -3,7 +3,8 @@ const API_URL = process.env.WP_API_URL;
 export async function fetchAPI(query, { variables } = {}) {
   // Set up some headers to tell the fetch call
   // that this is an application/json type
-  const headers = { 'Content-Type': 'application/json' };
+  const headers = { 'Content-Type': 'application/json',
+                    'Origin': 'http://localhost:3000' };
 
   // build out the fetch() call using the API_URL
   // environment variable pulled in at the start
@@ -21,7 +22,7 @@ export async function fetchAPI(query, { variables } = {}) {
   if (json.errors) {
     console.log(json.errors);
     console.log('error details', query, variables);
-    throw new Error('Failed to fetch API');
+    // throw new Error('Failed to fetch API');
   }
   return json.data;
 }
@@ -45,6 +46,9 @@ export async function getAllPosts() {
             }
             extraPostInfo {
               auteurExtrait
+              image {
+                sourceUrl
+              }
             }
           }
         }
@@ -171,3 +175,29 @@ export const getComments = async(id) => {
 
   return data?.post
 }
+
+
+export const postContact = async(name, email, phone_number, message) => {
+  const data = await fetchAPI(
+    `
+    mutation formContact($name: String, $message :String, $phone_number:String, $email: String) {
+      __typename
+      createFormContacte(input: {phone_number: $phone_number, name: $name, message: $message, email: $email}) {
+        data
+        success
+      }
+    }
+  `, 
+    {
+      variables: {
+        "name":name,
+        "message":message,
+        "email":email,
+        "phone_number": phone_number
+      }
+    }
+  )
+
+  return data?.createFormContacte
+}
+

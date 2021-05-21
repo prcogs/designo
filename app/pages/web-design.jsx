@@ -14,7 +14,7 @@ const Web_design = () => {
 
 
    return(
-      <>
+      <div className="backgroundPage backgroundPage--pageDesign">
          <Head>
             <title>Web design - Designo</title>
             {/* <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32" /> */}
@@ -40,7 +40,7 @@ const Web_design = () => {
          </div>
 
          <Footer/>
-      </>
+      </div>
    )
 }
 

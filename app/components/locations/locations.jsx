@@ -1,20 +1,25 @@
+import { useEffect } from "react";
+import MapProvider from "./mapProvider";
 
 
 const AllLocations = ({ dataLocations }) => {
+   
    return(
       <div className="locations__allLocations">
-         {dataLocations.map((location, i) => {
-            return <Location location={location} key={i}/>
-         })}
+         <MapProvider>
+            {dataLocations.map((location, i) => {
+               return <Location location={location} id={i} key={i}/>
+            })}
+         </MapProvider>
       </div>
    )
 }
 
-export const Location = ({ location }) => {
-
+export const Location = ({ location, id }) => {
+   
    return(
       <div className="locations__location">
-         <img src="/assets/locations/desktop/image-map-australia.png"/>
+         <div id={"mapid" + id} className="mapid"></div>
          <div className="locations__locationContainer">
             <h2>{location.country}</h2>
             <div className="locations__locationWrapper">

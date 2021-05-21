@@ -11,7 +11,7 @@ const Contact = () => {
    const nameSize = getNameSizeOfScreen()
 
    return(
-      <>
+      <div className="backgroundPage backgroundPage--pageContact">
          <Head>
             <title>Contact - Designo</title>
             {/* <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32" /> */}
@@ -34,7 +34,7 @@ const Contact = () => {
          </div>
 
          <Footer/>
-      </>
+      </div>
    )
 }
 

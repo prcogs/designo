@@ -8,6 +8,7 @@ footer {
       &__about {
          display: flex;
          flex-direction: column;
+         align-items: center;
          position: relative;
          max-width: 950px;
          top: 11.9rem;
@@ -16,7 +17,7 @@ footer {
          background-color: $first-primary-color;
          background-image: url("/assets/shared/desktop/bg-pattern-call-to-action.svg");
          border-radius: 15px;
-         margin: auto;
+         // margin: auto;
          margin-left: 1.5rem;
          margin-right: 1.5rem;
          padding: 4rem 1.5rem 4rem 1.5rem;

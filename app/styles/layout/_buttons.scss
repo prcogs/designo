@@ -5,6 +5,7 @@
    font-weight: 500;
    letter-spacing: 1.1px;
    width: max-content;
+   height: min-content;
 
    &--dark {
       @include button($second-secondary-color,
@@ -13,8 +14,9 @@
                    $first-secondary-color,
                    "",
                    8px,
-                   3.5rem,
-                   25px);
+                   none,
+                   25px,
+                   15px);
    }
    
    &--light {
@@ -24,7 +26,8 @@
                      $first-secondary-color,
                      "",
                      8px,
-                     3.5rem,
-                     25px);  
+                     none,
+                     25px,
+                     15px);  
    }              
 }

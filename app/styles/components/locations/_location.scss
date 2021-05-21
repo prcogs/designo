@@ -33,7 +33,7 @@
          @media screen and (min-width:1024px){
             flex-direction: row;
 
-            img {
+            .mapid {
                margin-right: 2rem;
             }
          }
@@ -43,13 +43,14 @@
          @media screen and (min-width:1024px){
             flex-direction: row-reverse;
 
-            img {
+            .mapid {
                margin-left: 2rem;
             }
          }
       }
 
-      img {
+      .mapid {
+         height: 20rem;
 
          @media screen and (min-width:768px){
             border-radius: 15px;
@@ -57,6 +58,8 @@
          }
 
          @media screen and (min-width:1024px){
+            width: 30rem;
+            height: auto;
             margin-bottom: 0;
          }
       }
