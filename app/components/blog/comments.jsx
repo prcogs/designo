@@ -47,7 +47,7 @@ const Comments = ({  comments, reqComments, isLoading }) => {
 
       return(
          <div className="comments">
-            <p>{comments.commentCount !== null ? comments.commentCount : 0} commentaire{comments.commentCount > 1 && "s"}</p>
+            <p>{comments.commentCount !== null ? comments.commentCount : 0} comment{comments.commentCount > 1 && "s"}</p>
 
             <PaginationRounded handleChange={handleChange} numberMaxPages={numberMaxPages}/>
 
@@ -73,7 +73,7 @@ const Comments = ({  comments, reqComments, isLoading }) => {
                   )
                }) : 
 
-               <p>No commentaire</p>
+               <p>No comments</p>
             }
          </div>
       )
