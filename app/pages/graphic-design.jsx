@@ -33,7 +33,7 @@ const Graphic_design = () => {
 
             <CardsProject projects={dataProjectGraphic}/>
             
-            <CardsDesign page="graphic_design"/>
+            <CardsDesign page="graphic-design"/>
 
          </div>
 

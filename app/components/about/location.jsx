@@ -3,7 +3,6 @@ import Link from "next/link"
 
 const Location = ({ country }) => {
   
-
    return(
       <div className="about__location">
          <img src={`/assets/shared/desktop/illustration-${country}.svg`} alt={"Illustration " + country}/>
