@@ -9,20 +9,16 @@ const MapProvider = ({ children }) => {
          createMap("mapid0", [43.643694, -79.580405], token)
          createMap("mapid1", [-30.3290675,149.7883872], token)
          createMap("mapid2", [51.7223,-3.8501], token)
-      }, 500)
+      }, 100)
 
       return () => clearTimeout(timer)
       
     },[])
 
-   return(
-      <>
-         {children}
-      </>
-   )
+   return <>{children}</>
 }
 
-const createMap = (id, pos, token, mapRef) => {
+const createMap = (id, pos, token) => {
    
    var mymap = L.map(id).setView(pos, 13);
    var marker = L.marker(pos).addTo(mymap);

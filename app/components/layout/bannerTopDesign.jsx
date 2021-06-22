@@ -1,16 +1,13 @@
 
 
 const BannerTopDesign = ({ children, detailClassName }) => {
+   let className = ""
    if(detailClassName !== undefined) {
-      var className = " " + detailClassName
-   } else {
-      var className = ""
+      className = detailClassName
    }
 
    return(
-      <div className={"bannerTopDesign" + className}>
-         {children}
-      </div>
+      <div className={`bannerTopDesign ${className}`}> {children} </div>
    )
 }
 

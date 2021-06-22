@@ -5,21 +5,18 @@ const ModalForm = ({ message, success }) => {
    const [className, setClassName] = useState("fade-in")
 
    useEffect(() => {
-      const timerClassName = setTimeout(() => {
+      const timer = setTimeout(() => {
          setClassName("fade-out")
        }, 5000);
 
-       return () => clearTimeout(timerClassName);
+       return () => clearTimeout(timer);
    })
 
 
    return (
-         <div className={"modalForm modalForm--" + success + " " + className}>
-            <div className="modalFormContainer">
-               {message}
-            </div>
-            
-            <div className={"modalForm__progressBar modalForm__progressBar--" + success}></div>
+         <div className={`modalForm modalForm--${success} ${className}`}>
+            <div className="modalFormContainer">{message}</div>
+            <div className={`modalForm__progressBar modalForm__progressBar--${success}`}></div>
          </div>
    )
 }

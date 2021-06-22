@@ -58,51 +58,77 @@ const FormContact= () => {
 
    return(
       <>
-      <BannerTopDesign detailClassName="formContact">
-         <div className="formContact__description">
-            <h2>Contact Us</h2>
-            <p>Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow.
+         <BannerTopDesign detailClassName="formContact">
+            <div className="formContact__description">
+               <h2>Contact Us</h2>
+               <p>Ready to take it to the next level? Let’s talk about your project or idea and find out how we can help your business grow.
                   If you are looking for unique digital experiences that’s relatable to your users, drop us a line.</p>
-         </div>
+            </div>
 
-         <form className="formContact__form" onSubmit={handleSubmit(onSubmit)}>
-            <label>
-               <input type="text" placeholder="Name" {...register("userName")}/>
-               {errors.userName && <span className="formContact__errors"> {errors.userName.message} <img src="/assets/exclamation-solid.svg" alt="Icon exclamation"/></span>}
-            </label>
+            <form className="formContact__form" onSubmit={handleSubmit(onSubmit)}>
+               <label>
+                  <input type="text" placeholder="Name" {...register("userName")} />
+                  {errors.userName && (
+                        <span className="formContact__errors"> 
+                           {errors.userName.message} 
+                           <img src="/assets/exclamation-solid.svg" alt="Icon exclamation" />
+                        </span>
+                     )
+                  }
+               </label>
 
-            <label>
-               <input type="text" placeholder="Email adress" {...register("email")}/>
-               {errors.email && <span className="formContact__errors"> {errors.email.message} <img src="/assets/exclamation-solid.svg" alt="Icon exclamation"/></span>}
-            </label>
+               <label>
+                  <input type="text" placeholder="Email adress" {...register("email")} />
+                  {errors.email && (
+                        <span className="formContact__errors"> 
+                           {errors.email.message} 
+                           <img src="/assets/exclamation-solid.svg" alt="Icon exclamation" />
+                        </span>
+                     )
+                  }
+               </label>
 
-            <label>
-               <input type="tel" placeholder="Phone" {...register("phone")}/>
-               {errors.phone && <span className="formContact__errors"> {errors.phone.message} <img src="/assets/exclamation-solid.svg" alt="Icon exclamation"/></span>}
-            </label>
+               <label>
+                  <input type="tel" placeholder="Phone" {...register("phone")}/>
+                  {errors.phone && (
+                        <span className="formContact__errors"> 
+                           {errors.phone.message} 
+                           <img src="/assets/exclamation-solid.svg" alt="Icon exclamation" />
+                        </span>
+                     )
+                  }
+               </label>
 
-            <label>
-               <textarea placeholder="Your message" {...register("message")}/>
-               {errors.message && <span className="formContact__errors"> {errors.message.message} <img src="/assets/exclamation-solid.svg" alt="Icon exclamation"/></span>}
-            </label>
+               <label>
+                  <textarea placeholder="Your message" {...register("message")} />
+                  {errors.message && (
+                        <span className="formContact__errors">
+                           {errors.message.message} 
+                           <img src="/assets/exclamation-solid.svg" alt="Icon exclamation" />
+                        </span>
+                     )
+                  }
+               </label>
 
 
-            {/* Input anti-spam - si le champ est rempli, cela veux dire que c'est un spam */}
-            <label className="formContact__remarque">Remarque
-               <input className="formContact__remarque" name="remarque"
-                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                     placeholder="nom@domaine.com"
-                     {...register("remarque")}
-                     />
-            </label>
+               {/* Input anti-spam - si le champ est rempli, cela veux dire que c'est un spam */}
+               <label className="formContact__remarque">
+                  Remarque
+                  <input className="formContact__remarque" 
+                         name="remarque"
+                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                         placeholder="nom@domaine.com"
+                         {...register("remarque")}
+                  />
+               </label>
 
-            <button disabled={isLoading ? true : false} className="btn--dark">
-               {isLoading ? <img src="/assets/images/Dual_Ring-1s-40px.svg" alt="Spin"/> : "SUBMIT" }
-            </button>
-         </form>
-      </BannerTopDesign>
+               <button disabled={isLoading ? true : false} className="btn--dark">
+                  {isLoading ? <img src="/assets/images/Dual_Ring-1s-40px.svg" alt="Spin"/> : "SUBMIT" }
+               </button>
+            </form>
+         </BannerTopDesign>
 
-      {viewModal && <ModalForm message={respAPI.msg} success={respAPI.success}/>}
+         {viewModal && <ModalForm message={respAPI.msg} success={respAPI.success}/>}
       </>
       
    )

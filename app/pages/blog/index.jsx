@@ -5,7 +5,7 @@ import CardsProject from "../../components/layout/cardsProject"
 import Footer from "../../components/layout/footer"
 import Header from "../../components/layout/header"
 import { getAllPosts } from "../../lib/api"
-import { dataBlog } from "../../lib/dataBlog"
+import { dataBlog } from "../../lib/data/dataBlog"
 import getNameSizeOfScreen from "../../lib/getSizeScreen"
 
 

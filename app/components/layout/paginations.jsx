@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
    const classes = useStyles(); 
  
    return (
-     <div className={classes.root + " paginations"}>
+     <div className={`${classes.root} paginations`}>
        <Pagination count={numberMaxPages} shape="rounded" onChange={handleChange}/>
      </div>
    );

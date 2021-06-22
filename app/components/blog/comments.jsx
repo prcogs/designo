@@ -32,11 +32,7 @@ const Comments = ({  comments, reqComments, isLoading }) => {
    },[reqComments])
 
    if(isLoading) {
-      return (
-         <div className="comments">
-            Loading data
-         </div>
-      )
+      return <div className="comments"> Loading data </div>
 
    } else {
 
@@ -49,7 +45,7 @@ const Comments = ({  comments, reqComments, isLoading }) => {
          <div className="comments">
             <p>{comments.commentCount !== null ? comments.commentCount : 0} comment{comments.commentCount > 1 && "s"}</p>
 
-            <PaginationRounded handleChange={handleChange} numberMaxPages={numberMaxPages}/>
+            <PaginationRounded handleChange={handleChange} numberMaxPages={numberMaxPages} />
 
             {comments.commentCount !== null ? 
                currentPosts.map((comment, key) => {
@@ -65,7 +61,7 @@ const Comments = ({  comments, reqComments, isLoading }) => {
                   }
 
                   return (
-                     <div className={"comments__comment" + animClass} key={key}>
+                     <div className={`comments__comment ${animClass}`} key={key}>
                         <p>{comment?.author.node.name}</p>
                         <p>le {formatDate(comment.date)[0]} à {formatDate(comment.date)[1]}</p>
                         {ReactHtmlParser(comment.content)}
@@ -80,6 +76,5 @@ const Comments = ({  comments, reqComments, isLoading }) => {
    }
 }
 
-   
 
 export default Comments

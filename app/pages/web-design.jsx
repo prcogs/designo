@@ -5,7 +5,7 @@ import CardsDesign from "../components/layout/cardsDesign";
 
 import Footer from '../components/layout/footer'
 import Header from '../components/layout/header'
-import { dataProjectWeb } from "../lib/dataProject";
+import { dataProjectWeb } from "../lib/data/dataProject";
 import getNameSizeOfScreen from '../lib/getSizeScreen';
 
 
@@ -34,9 +34,7 @@ const Web_design = () => {
             
             <CardsProject projects={dataProjectWeb}/>
 
-            <CardsDesign page="web_design"/>
-            
-
+            <CardsDesign page="web-design"/>
          </div>
 
          <Footer/>

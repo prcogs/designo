@@ -55,37 +55,53 @@ const FormComments = ({ postId, reqComments }) => {
       <>
          <form className="formContact__form formContact__form--commentaire" onSubmit={handleSubmit(onSubmit)}>
             <label>
-               <input type="text" placeholder="Name" {...register("userName")}/>
-               {errors.userName && <span className="formContact__errors"> {errors.userName.message} <img src="/assets/exclamation-solid.svg" alt="Icon exclamation"/></span>}
+               <input type="text" 
+                      placeholder="Name" 
+                      {...register("userName")}
+               />
+               {errors.userName && (
+                     <span className="formContact__errors"> 
+                        {errors.userName.message} 
+                        <img src="/assets/exclamation-solid.svg" alt="Icon exclamation"/>
+                     </span>
+                  )
+               }
             </label>
 
             <label>
-               <textarea placeholder="Your message" {...register("contentComment")}/>
-               {errors.contentComment && <span className="formContact__errors">{errors.contentComment.message} <img src="/assets/exclamation-solid.svg" alt="Icon exclamation"/></span>}
+               <textarea placeholder="Your message" 
+                         {...register("contentComment")}
+               />
+               {errors.contentComment && (
+                     <span className="formContact__errors">
+                        {errors.contentComment.message} 
+                        <img src="/assets/exclamation-solid.svg" alt="Icon exclamation"/>
+                     </span>
+                  )
+               }
             </label>
 
             {/* Input anti-spam - si le champ est rempli, cela veux dire que c'est un spam */}
             <label className="formContact__remarque">Remarque
                <input className="formContact__remarque" 
-                     name="remarque"
-                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                     placeholder="nom@domaine.com"
-                     {...register("remarque")}
-                     />
+                      name="remarque"
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                      placeholder="nom@domaine.com"
+                      {...register("remarque")}
+               />
             </label>
 
-            <button disabled={isLoading ? true : false} className="btn--dark">
+            <button disabled={isLoading} className="btn--dark">
                {isLoading ? <img src="/assets/images/Dual_Ring-1s-40px.svg" alt="Spin"/> : "SUBMIT" }
             </button>
 
          
          </form>
 
-        {viewModal && <ModalForm message={respAPI.msg} success={respAPI.success}/>}
+        {viewModal && <ModalForm message={respAPI.msg} success={respAPI.success} />}
       </>
    )
 }
-
 
 
 export default FormComments

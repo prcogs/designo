@@ -3,7 +3,7 @@ import Head from "next/head"
 import Footer from '../components/layout/footer'
 import Header from '../components/layout/header'
 import AllLocations from "../components/locations/locations";
-import dataLocations from "../lib/dataLocations";
+import dataLocations from "../lib/data/dataLocations";
 import getNameSizeOfScreen from '../lib/getSizeScreen';
 
 
